@@ -63,7 +63,7 @@ bool Button::Initialize(D3DClass* direct, HWND hwnd)
 		return false;
 	}
 
-	result = LoadTexture(L"../Win32Project3/data/pic0035.gif");
+	result = LoadTexture(L"../Win32Project3/data/font.png");
 	if (!result)
 	{
 		MessageBox(hwnd, L"Could not initialize the texture object.", L"Error", MB_OK);
