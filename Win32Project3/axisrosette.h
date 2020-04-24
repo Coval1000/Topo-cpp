@@ -1,0 +1,44 @@
+#pragma once
+#pragma once
+////////////////////////////////////////////////////////////////////////////////
+// Filename: axisrosette.h
+////////////////////////////////////////////////////////////////////////////////
+#ifndef _AXISROSETTE_H_
+#define _AXISROSETTE_H_
+
+
+//////////////
+// INCLUDES //
+//////////////
+#include <d3d11.h>
+#include <d3dx10math.h>
+#include "TriangleClass.h"
+#include "VectorLineClass.h"
+using namespace std;
+
+
+///////////////////////
+// MY CLASS INCLUDES //
+///////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+// Class name: AxisRosetteClass
+////////////////////////////////////////////////////////////////////////////////
+class AxisRosette
+{
+
+public:
+	AxisRosette();
+	AxisRosette(const AxisRosette&);
+	~AxisRosette();
+
+	bool Initialize(D3DClass*, float, HWND);
+	void Shutdown();
+	bool Render(D3DXMATRIX, D3DXMATRIX, D3DXMATRIX);
+
+private:
+	TriangleClass *_Triangle;
+	VectorLineClass *_Line;
+};
+
+#endif
